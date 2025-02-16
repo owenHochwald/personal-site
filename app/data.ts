@@ -83,6 +83,14 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     link: 'https://insomniacdesign.com/',
     id: 'work1',
   },
+  {
+    company: 'Stealth Startup',
+    title: 'Lead Machine Learning Engineer',
+    start: 'Jan 2025',
+    end: 'Present',
+    link: '/',
+    id: 'work2',
+  },
 ]
 
 export const EDUCATION: Education[] = [
