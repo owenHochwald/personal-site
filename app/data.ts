@@ -107,17 +107,10 @@ export const EDUCATION: Education[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: 'Example 1',
-    description: 'Description of project 2',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+    title: 'How can we predict dry eyes?',
+    description: 'Exploratory data analysis with a KNN model in R.',
+    link: '/blog/exploring-dry-eye-disease-dataset',
     uid: 'blog-1',
-  },
-  {
-    title: 'Example 2',
-    description:
-      'Description of project 2',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-2',
   },
 ]
 
