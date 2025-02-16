@@ -15,6 +15,8 @@ export const metadata: Metadata = {
   title: 'Owen Hochwald - Personal website',
   description:
     'A personal website.',
+  verification: { google: "google212fd64ec34b7c1f.html" },
+
 }
 
 const geist = Geist({
