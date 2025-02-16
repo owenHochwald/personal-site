@@ -15,6 +15,16 @@ type WorkExperience = {
   id: string
 }
 
+type Education = {
+    school: string
+    link: string
+    degree: string
+    start: string
+    end: string
+    gpa: string
+    id: string
+  }
+
 type BlogPost = {
   title: string
   description: string
@@ -70,10 +80,22 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Software / Machine Learning Engineer Intern',
     start: 'June 2023',
     end: 'Aug 2023',
-    link: 'https://ibelick.com',
+    link: 'https://insomniacdesign.com/',
     id: 'work1',
   },
 ]
+
+export const EDUCATION: Education[] = [
+    {
+      school: 'University of British Columbia',
+      link: "https://www.cs.ubc.ca/about/numbers",
+      degree: 'BSc Computer Science',
+      start: '2024',
+      end: '2026',
+      gpa: '4.33/4.33',
+      id: 'work1',
+    },
+  ]
 
 export const BLOG_POSTS: BlogPost[] = [
   {
