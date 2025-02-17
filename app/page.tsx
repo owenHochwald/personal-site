@@ -126,7 +126,9 @@ function MagneticSocialLink({
 
 export default function Personal() {
     return (
+
         <motion.main
+
             className="space-y-24"
             variants={VARIANTS_CONTAINER}
             initial="hidden"
@@ -308,5 +310,6 @@ export default function Personal() {
                 </div>
             </motion.section>
         </motion.main>
+
     )
 }
