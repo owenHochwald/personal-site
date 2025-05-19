@@ -87,7 +87,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work1',
   },
   {
-    company: 'UBC Vision Cognition Lab',
+    company: 'UBC Visual Cognition Lab',
     title: 'Coding Team Co-pilot Internship',
     start: 'May 2025',
     end: 'Present',
