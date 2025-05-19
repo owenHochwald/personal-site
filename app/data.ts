@@ -87,11 +87,11 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work1',
   },
   {
-    company: 'Stealth Startup',
-    title: 'Lead Machine Learning Engineer',
-    start: 'Jan 2025',
+    company: 'UBC Vision Cognition Lab',
+    title: 'Coding Team Co-pilot Internship',
+    start: 'May 2025',
     end: 'Present',
-    link: '/',
+    link: 'https://www.viscoglab.psych.ubc.ca/',
     id: 'work2',
   },
 ]
