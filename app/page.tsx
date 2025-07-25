@@ -90,6 +90,23 @@ function ProjectVideo({ src }: ProjectVideoProps) {
     )
 }
 
+function ProjectPlaceholderPattern() {
+    return (
+        <div className="relative aspect-video w-full rounded-xl bg-zinc-50 dark:bg-zinc-900 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-zinc-100/50 to-zinc-200/30 dark:from-transparent dark:via-zinc-800/50 dark:to-zinc-700/30"></div>
+            <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 25% 25%, rgba(120, 119, 198, 0.1) 0%, transparent 50%), 
+                                 radial-gradient(circle at 75% 75%, rgba(255, 119, 198, 0.1) 0%, transparent 50%)`,
+            }}></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-zinc-400 dark:text-zinc-600 text-sm font-medium">
+                    {/* You could add project name or icon here */}
+                </div>
+            </div>
+        </div>
+    )
+}
+
 function MagneticSocialLink({
     children,
     link,
@@ -140,76 +157,8 @@ export default function Personal() {
             >
                 <div className="flex-1">
                     <p className="text-zinc-600 dark:text-zinc-400">
-                        Building intelligent, efficient, and user-friendly digital experiences.
-                        Bridging the gap between AI, software, and design.
+                        Disciplined CS student building backend systems and integrating ML to solve real-world problems.
                     </p>
-                </div>
-            </motion.section>
-
-            <motion.section
-                variants={VARIANTS_SECTION}
-                transition={TRANSITION_SECTION}
-            >
-                <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                    {PROJECTS.map((project) => (
-                        <div key={project.name} className="space-y-2">
-                            <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                                <ProjectVideo src={project.video} />
-                            </div>
-                            <div className="px-1">
-                                <a
-                                    className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
-                                    href={project.link}
-                                    target="_blank"
-                                >
-                                    {project.name}
-                                    <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
-                                </a>
-                                <p className="text-base text-zinc-600 dark:text-zinc-400">
-                                    {project.description}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </motion.section>
-
-            <motion.section
-                variants={VARIANTS_SECTION}
-                transition={TRANSITION_SECTION}
-            >
-                <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
-                <div className="flex flex-col space-y-2">
-                    {WORK_EXPERIENCE.map((job) => (
-                        <a
-                            className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
-                            href={job.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            key={job.id}
-                        >
-                            <Spotlight
-                                className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
-                                size={64}
-                            />
-                            <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
-                                <div className="relative flex w-full flex-row justify-between">
-                                    <div>
-                                        <h4 className="font-normal dark:text-zinc-100">
-                                            {job.title}
-                                        </h4>
-                                        <p className="text-zinc-500 dark:text-zinc-400">
-                                            {job.company}
-                                        </p>
-                                    </div>
-                                    <p className="text-zinc-600 dark:text-zinc-400">
-                                        {job.start} - {job.end}
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    ))}
                 </div>
             </motion.section>
 
@@ -258,6 +207,93 @@ export default function Personal() {
                 variants={VARIANTS_SECTION}
                 transition={TRANSITION_SECTION}
             >
+                <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
+                <div className="flex flex-col space-y-2">
+                    {WORK_EXPERIENCE.map((job) => (
+                        <a
+                            className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
+                            href={job.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            key={job.id}
+                        >
+                            <Spotlight
+                                className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
+                                size={64}
+                            />
+                            <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
+                                <div className="relative flex w-full flex-row justify-between mb-3">
+                                    <div>
+                                        <h4 className="font-normal dark:text-zinc-100">
+                                            {job.title}
+                                        </h4>
+                                        <p className="text-zinc-500 dark:text-zinc-400">
+                                            {job.company}
+                                        </p>
+                                    </div>
+                                    <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+                                        {job.start} - {job.end}
+                                    </p>
+                                </div>
+                                {/* Add technologies/skills section */}
+                                {job.technologies && (
+                                    <div className="flex flex-wrap gap-1.5 mt-2">
+                                        {job.technologies.map((tech, index) => (
+                                            <span
+                                                key={index}
+                                                className="inline-flex items-center rounded-full bg-zinc-100 px-2 py-0.5 text-xs font-medium text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </motion.section>
+
+            <motion.section
+                variants={VARIANTS_SECTION}
+                transition={TRANSITION_SECTION}
+            >
+                <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    {PROJECTS.map((project) => (
+                        <div key={project.name} className="space-y-2">
+                            {project.video ? (
+                                <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                                    <ProjectVideo src={project.video} />
+                                </div>
+                            ) : (
+                                <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                                    <ProjectPlaceholderPattern />
+                                </div>)}
+                            <div className="px-1">
+                                <a
+                                    className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
+                                    href={project.link}
+                                    target="_blank"
+                                >
+                                    {project.name}
+                                    <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
+                                </a>
+                                <p className="text-base text-zinc-600 dark:text-zinc-400">
+                                    {project.description}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </motion.section>
+
+
+
+            <motion.section
+                variants={VARIANTS_SECTION}
+                transition={TRANSITION_SECTION}
+            >
                 <h3 className="mb-3 text-lg font-medium">Blog</h3>
                 <div className="flex flex-col space-y-0">
                     <AnimatedBackground
@@ -296,7 +332,7 @@ export default function Personal() {
             >
                 <h3 className="mb-5 text-lg font-medium">Connect</h3>
                 <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-                    Feel free to contact me at{' '}
+                    Feel free to contact me :) {' '}
                     <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
                         {EMAIL}
                     </a>

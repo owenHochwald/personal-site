@@ -1,18 +1,19 @@
 type Project = {
-  name: string
-  description: string
-  link: string
-  video: string
-  id: string
+    name: string
+    description: string
+    link: string
+    video?: string
+    id: string
 }
 
 type WorkExperience = {
-  company: string
-  title: string
-  start: string
-  end: string
-  link: string
-  id: string
+    company: string
+    title: string
+    start: string
+    technologies: string[]
+    end: string
+    link: string
+    id: string
 }
 
 type Education = {
@@ -23,117 +24,146 @@ type Education = {
     end: string
     gpa: string
     id: string
-  }
+}
 
 type BlogPost = {
-  title: string
-  description: string
-  link: string
-  uid: string
+    title: string
+    description: string
+    link: string
+    uid: string
 }
 
 type SocialLink = {
-  label: string
-  link: string
+    label: string
+    link: string
 }
 
 export const PROJECTS: Project[] = [
-  {
-    name: 'Shakespeare GPT',
-    description:
-      'Custom trained transformer to generate original Shakespearean-style text.',
-    link: 'https://github.com/owenHochwald/shakespeare-gpt/',
-    video:
-    //   'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
-    '/gpt_demo.mp4',
-    id: 'project1',
-  },
-  {
-    name: 'AdmitifyAI',
-    description:
-      'A holistic approach to college admissions guidance, powered by AI-driven insights.',
-    link: 'https://admitifyai.com/',
-    video:
-      'admitifyResumeDemo.mp4',
-    id: 'project1',
-  },
-  {
-    name: 'Aftrbrnr',
-    description: 'Open-source, company-wide time-tracking end-to-end web app.',
-    link: 'https://www.aftrbrnr.com/',
-    video:
-    //   'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
-    '/aftrbrnr_demo.mp4',
-    id: 'project2',
-  },
-  {
-    name: 'Pawsture Pal',
-    description: 'Chrome extension to promote better posture habits with personalized reminders and friendly cat animations.',
-    link: 'https://chromewebstore.google.com/detail/Pawsture%20Pal/ghdnbollliflcjoeglpnlecdhcbcbopf',
-    video:
-    //   'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
-    '/extension_demo.mp4',
-    id: 'project2',
-  },
+    {
+        name: "RecMind (WIP)",
+        description: "A POC real-time article recommendation system using a Go backend, RabbitMQ, and a RAG pipeline. Features a REST API ingestion point and embedded vector store in Pinecone for fast semantic search and recommendations.",
+        link: 'https://github.com/owenHochwald/rec-mind',
+        video: "",
+        id: 'project0'
+    },
+    {
+        name: "Research on LLM Architecture, Prompting & Interpretability (WIP)",
+        description: "Collaborative research with a 4-person team and a Stanford alum mentor on novel techniques for in LLMs. Findings are being prepared for submission to leading conferences such as ICLR and EACL.",
+        link: '',
+        video: "",
+        id: 'project0'
+    },
+    {
+        name: 'Shakespeare GPT',
+        description:
+            'Custom trained transformer based on the paper "Attention Is All You Need" to generate original Shakespearean-style text using PyTorch.',
+        link: 'https://github.com/owenHochwald/shakespeare-gpt/',
+        video:
+            //   'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+            '/gpt_demo.mp4',
+        id: 'project1',
+    },
+    {
+        name: 'AdmitifyAI',
+        description:
+            '5 person team collaberative full-stack project to build a tool taking a holistic approach to college admissions guidance, powered by AI-driven insights written..',
+        link: 'https://admitifyai.com/',
+        video:
+            'admitifyResumeDemo.mp4',
+        id: 'project1',
+    },
+    {
+        name: 'Aftrbrnr',
+        description: 'Open-source, company-wide time-tracking end-to-end web app built with NextJs and PostgreSQL.',
+        link: 'https://www.aftrbrnr.com/',
+        video:
+            //   'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+            '/aftrbrnr_demo.mp4',
+        id: 'project2',
+    },
+    {
+        name: 'Pawsture Pal',
+        description: 'Chrome extension to promote better posture habits with personalized reminders and friendly cat animations.',
+        link: 'https://chromewebstore.google.com/detail/Pawsture%20Pal/ghdnbollliflcjoeglpnlecdhcbcbopf',
+        video:
+            //   'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+            '/extension_demo.mp4',
+        id: 'project2',
+    },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
-  {
-    company: 'Insomniac Design, Inc.',
-    title: 'Software / Machine Learning Engineer Intern',
-    start: 'June 2023',
-    end: 'Aug 2023',
-    link: 'https://insomniacdesign.com/',
-    id: 'work1',
-  },
-  {
-    company: 'UBC Visual Cognition Lab',
-    title: 'Coding Team Co-pilot Internship',
-    start: 'May 2025',
-    end: 'Present',
-    link: 'https://www.viscoglab.psych.ubc.ca/',
-    id: 'work2',
-  },
+    {
+        company: 'Stealth Startup',
+        title: 'Full Stack / Machine Learning Engineer Intern',
+        start: 'July 2025',
+        end: 'Present',
+        technologies: ["Kotlin", "Spring Boot", "RAG Systems", "TypeScript", "React", "Documentation", "MariaDB"],
+        link:
+            "",
+        // 'https://www.viscoglab.psych.ubc.ca/',
+
+        id: 'work1',
+    },
+    {
+        company: 'UBC Visual Cognition Lab',
+        title: 'Coding Team Co-pilot Internship',
+        start: 'April 2025',
+        end: 'Present',
+        technologies: ["React", "Redux", "MongoDB", "AWS S3", "Express.js", "TypeScript"],
+        link: 'https://www.viscoglab.psych.ubc.ca/',
+        id: 'work2',
+    },
+    {
+        company: 'Insomniac Design, Inc.',
+        title: 'Backend / Machine Learning Engineer Intern',
+        start: 'June 2023',
+        end: 'Aug 2023',
+        technologies: ["Python", "FastAPI", "API Development"],
+        link: 'https://insomniacdesign.com/',
+        id: 'work3',
+    },
+
 ]
 
 export const EDUCATION: Education[] = [
     {
-      school: 'University of British Columbia',
-      link: "https://www.cs.ubc.ca/about/numbers",
-      degree: 'BSc Computer Science - Dean\'s List - Science Scholar',
-      start: '2024',
-      end: '2026',
-      gpa: '4.33/4.33',
-      id: 'work1',
+        school: 'University of British Columbia',
+        link: "https://www.cs.ubc.ca/about/numbers",
+        degree: 'BSc Computer Science - Dean\'s List - Science Scholar',
+        start: '2024',
+        end: '2027',
+        gpa: '4.33/4.33',
+        id: 'work1',
     },
-  ]
+]
 
 export const BLOG_POSTS: BlogPost[] = [
-  {
-    title: 'How can we predict dry eyes?',
-    description: 'Exploratory data analysis with a KNN model in R.',
-    link: '/blog/exploring-dry-eye-disease-dataset',
-    uid: 'blog-1',
-  },
+    {
+        title: 'How can we predict dry eyes?',
+        description: 'Exploratory data analysis with a KNN model in R.',
+        link: '/blog/exploring-dry-eye-disease-dataset',
+        uid: 'blog-1',
+    },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  {
-    label: 'Github',
-    link: 'https://github.com/owenHochwald/',
-  },
-  {
-    label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/owen0hochwald/',
-  },
-  {
-    label: 'Kaggle',
-    link: 'https://www.kaggle.com/owenhochwald',
-  },
-  {
-    label: 'Resume',
-    link: '/resume.pdf',
-  },
+    {
+        label: 'Github',
+        link: 'https://github.com/owenHochwald/',
+    },
+    {
+        label: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/owen0hochwald/',
+    },
+    {
+        label: 'Kaggle',
+        link: 'https://www.kaggle.com/owenhochwald',
+    },
+    {
+        label: 'Resume',
+        link: '/resume.pdf',
+    },
 ]
 
 export const EMAIL = 'owenhochwald@gmail.com'
