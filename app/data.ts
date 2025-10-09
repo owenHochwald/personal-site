@@ -40,17 +40,10 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
     {
-        name: "RecMind (WIP)",
-        description: "A POC real-time article recommendation system using a Go backend, RabbitMQ, and a RAG pipeline. Features a REST API ingestion point and embedded vector store in Pinecone for fast semantic search and recommendations.",
+        name: "RecMind",
+        description: "A real-time article knowledge base recommendation system using a Go backend, RabbitMQ, and a RAG pipeline. Features a REST API ingestion point and embedded vector store in Pinecone for fast semantic search and recommendations.",
         link: 'https://github.com/owenHochwald/rec-mind',
-        video: "",
-        id: 'project0'
-    },
-    {
-        name: "Research on LLM Architecture, Prompting & Interpretability (WIP)",
-        description: "Collaborative research with a 4-person team and a Stanford alum mentor on novel techniques for in LLMs. Findings are being prepared for submission to leading conferences such as ICLR and EACL.",
-        link: '',
-        video: "",
+        video: "/recmind_demo.mp4",
         id: 'project0'
     },
     {
@@ -94,11 +87,31 @@ export const PROJECTS: Project[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
     {
-        company: 'Stealth Startup',
-        title: 'Full Stack / Machine Learning Engineer Intern',
-        start: 'July 2025',
+        company: 'Cambio Earth Systems',
+        title: 'Software Developer I',
+        start: 'Incoming January 2026',
+        end: 'August 2026',
+        technologies: ["TypeScript", "React", "Java", "Docker"],
+        link:
+            "https://www.cambioearth.com/",
+        id: 'work-1',        
+    },
+    {
+        company: 'UBC Launch Pad',
+        title: 'Software Developer',
+        start: 'September 2025',
         end: 'Present',
-        technologies: ["Kotlin", "Spring Boot", "RAG Systems", "TypeScript", "React", "Documentation", "MariaDB"],
+        technologies: ["AWS", "Flask", "DynamoDB", "ECS", "Lambda", "Python",  "TypeScript", "React"],
+        link:
+            "https://www.ubclaunchpad.com/",
+        id: 'work0',        
+    },
+    {
+        company: 'Stealth Startup',
+        title: 'Software Engineer Intern',
+        start: 'July 2025',
+        end: 'September 2025',
+        technologies: ["Kotlin", "Docker", "Nginx", "Spring Boot", "RestAPIs", "TypeScript", "React", "MariaDB"],
         link:
             "",
         // 'https://www.viscoglab.psych.ubc.ca/',
@@ -119,7 +132,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
         title: 'Backend / Machine Learning Engineer Intern',
         start: 'June 2023',
         end: 'Aug 2023',
-        technologies: ["Python", "FastAPI", "API Development"],
+        technologies: ["Python", "FastAPI", "Lbl2Vec", "Unsupervised Sentiment Analysis", "API Development"],
         link: 'https://insomniacdesign.com/',
         id: 'work3',
     },
@@ -132,7 +145,7 @@ export const EDUCATION: Education[] = [
         link: "https://www.cs.ubc.ca/about/numbers",
         degree: 'BSc Computer Science - Dean\'s List - Science Scholar',
         start: '2024',
-        end: '2027',
+        end: '8',
         gpa: '4.33/4.33',
         id: 'work1',
     },
