@@ -41,7 +41,7 @@ type SocialLink = {
 export const PROJECTS: Project[] = [
     {
         name: "RecMind",
-        description: "A real-time article knowledge base recommendation system using a Go backend, RabbitMQ, and a RAG pipeline. Features a REST API ingestion point and embedded vector store in Pinecone for fast semantic search and recommendations.",
+        description: "A real-time article knowledge base recommendation system using a Go backend, RabbitMQ, and a RAG pipeline. Features a pub/sub ingestion point and embedded vector store for fast semantic search.",
         link: 'https://github.com/owenHochwald/rec-mind',
         video: "/recmind_demo.mp4",
         id: 'project0'
@@ -64,6 +64,15 @@ export const PROJECTS: Project[] = [
         video:
             'admitifyResumeDemo.mp4',
         id: 'project1',
+    },
+    {
+        name: 'Atlas of Westeros',
+        description: 'Full-featured Java Swing GUI map application for Game of Thrones. Developed with TDD (97% coverage) with OOP principles in mind.',
+        link: 'https://github.com/owenHochwald/atlas-of-westeros/',
+        video:
+            //   'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+            '/westeros.mov',
+        id: 'project1.5',
     },
     {
         name: 'Aftrbrnr',
