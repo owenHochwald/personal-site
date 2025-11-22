@@ -157,7 +157,7 @@ export default function Personal() {
             >
                 <div className="flex-1">
                     <p className="text-zinc-600 dark:text-zinc-400">
-                        Disciplined CS student building backend systems and integrating ML to solve real-world problems.
+                        Disciplined CS student building distributed full-stack systems and integrating ML to solve real-world problems.
                     </p>
                 </div>
             </motion.section>

@@ -5,6 +5,7 @@ import { Header } from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
 import { Particles } from '@/components/ui/particles'
+import { Analytics } from "@vercel/analytics/next"
 
 export const viewport: Viewport = {
     width: 'device-width',
@@ -37,7 +38,6 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>-
-
             <body
                 className={`${geist.variable} ${geistMono.variable} bg-white tracking-tight antialiased dark:bg-zinc-950`}
             >
@@ -59,6 +59,7 @@ export default function RootLayout({
                             <Header />
 
                             {children}
+                            <Analytics />
 
                             <Footer />
                         </div>

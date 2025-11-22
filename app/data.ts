@@ -37,7 +37,6 @@ type SocialLink = {
     label: string
     link: string
 }
-
 export const PROJECTS: Project[] = [
     {
         name: "RecMind",
@@ -45,6 +44,23 @@ export const PROJECTS: Project[] = [
         link: 'https://github.com/owenHochwald/rec-mind',
         video: "/recmind_demo.mp4",
         id: 'project0'
+    },
+    {
+        name: 'AdmitifyAI',
+        description:
+            '5 person team collaberative full-stack project to build a tool taking a holistic approach to college admissions guidance, powered by AI-driven insights written in Typescript, Nextjs, and React.',
+        link: 'https://admitifyai.com/',
+        video:
+            'admitifyResumeDemo.mp4',
+        id: 'project1',
+    },
+    {
+        name: 'Volt',
+        description:
+            'Terminal based HTTP / Load testing client supporting up to 10,000 concurrent requests with VIM style keybindings, acting as a Postman & K6 Alternative. Built in Golang.',
+        link: 'https://github.com/owenHochwald/Volt',
+        video: "",
+        id: 'projectvolt'
     },
     {
         name: 'Shakespeare GPT',
@@ -56,15 +72,7 @@ export const PROJECTS: Project[] = [
             '/gpt_demo.mp4',
         id: 'project1',
     },
-    {
-        name: 'AdmitifyAI',
-        description:
-            '5 person team collaberative full-stack project to build a tool taking a holistic approach to college admissions guidance, powered by AI-driven insights written..',
-        link: 'https://admitifyai.com/',
-        video:
-            'admitifyResumeDemo.mp4',
-        id: 'project1',
-    },
+
     {
         name: 'Atlas of Westeros',
         description: 'Full-featured Java Swing GUI map application for Game of Thrones. Developed with TDD (97% coverage) with OOP principles in mind.',
@@ -84,6 +92,13 @@ export const PROJECTS: Project[] = [
         id: 'project2',
     },
     {
+        name: 'Throne Tracker',
+        description: 'A real-time bathroom queue management for roomates. No more akward door kocking. Ever. Uses Golang, Typescript, Redis, and React.',
+        link: 'https://github.com/owenHochwald/Throne-Tracker',
+        video: "",
+        id: "projectThroneTracker"
+    },
+    {
         name: 'Pawsture Pal',
         description: 'Chrome extension to promote better posture habits with personalized reminders and friendly cat animations.',
         link: 'https://chromewebstore.google.com/detail/Pawsture%20Pal/ghdnbollliflcjoeglpnlecdhcbcbopf',
@@ -92,28 +107,19 @@ export const PROJECTS: Project[] = [
             '/extension_demo.mp4',
         id: 'project2',
     },
+
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
-    {
-        company: 'Cambio Earth Systems',
-        title: 'Software Developer I',
-        start: 'Incoming January 2026',
-        end: 'August 2026',
-        technologies: ["TypeScript", "React", "Java", "Docker"],
-        link:
-            "https://www.cambioearth.com/",
-        id: 'work-1',        
-    },
     {
         company: 'UBC Launch Pad',
         title: 'Software Developer',
         start: 'September 2025',
         end: 'Present',
-        technologies: ["AWS", "Flask", "DynamoDB", "ECS", "Lambda", "Python",  "TypeScript", "React"],
+        technologies: ["TypeScript", "AWS SDK", "DynamoDB", "ECS", "Lambda Functions", "React"],
         link:
             "https://www.ubclaunchpad.com/",
-        id: 'work0',        
+        id: 'work0',
     },
     {
         company: 'Stealth Startup',
@@ -123,8 +129,8 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
         technologies: ["Kotlin", "Docker", "Nginx", "Spring Boot", "RestAPIs", "TypeScript", "React", "MariaDB"],
         link:
             "",
-        // 'https://www.viscoglab.psych.ubc.ca/',
 
+        // 'https://www.viscoglab.psych.ubc.ca/',
         id: 'work1',
     },
     {
@@ -132,7 +138,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
         title: 'Coding Team Co-pilot Internship',
         start: 'April 2025',
         end: 'Present',
-        technologies: ["React", "Redux", "MongoDB", "AWS S3", "Express.js", "TypeScript"],
+        technologies: ["React", "Redux", "MongoDB", "AWS S3", "Express.js", "TypeScript", "RAG", "LangChain"],
         link: 'https://www.viscoglab.psych.ubc.ca/',
         id: 'work2',
     },
@@ -154,7 +160,7 @@ export const EDUCATION: Education[] = [
         link: "https://www.cs.ubc.ca/about/numbers",
         degree: 'BSc Computer Science - Dean\'s List - Science Scholar',
         start: '2024',
-        end: '8',
+        end: '2028',
         gpa: '4.33/4.33',
         id: 'work1',
     },
