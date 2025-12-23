@@ -57,9 +57,9 @@ export const PROJECTS: Project[] = [
     {
         name: 'Volt',
         description:
-            'Terminal based HTTP / Load testing client supporting up to 10,000 concurrent requests with VIM style keybindings, acting as a Postman & K6 Alternative. Built in Golang.',
+            'Terminal native HTTP / Load testing client w/ 200k req/sec with VIM style keybindings, acting as a Postman & K6 Alternative. Built in Golang.',
         link: 'https://github.com/owenHochwald/Volt',
-        video: "",
+        video: "volt.mp4",
         id: 'projectvolt'
     },
     {
@@ -160,8 +160,8 @@ export const EDUCATION: Education[] = [
         link: "https://www.cs.ubc.ca/about/numbers",
         degree: 'BSc Computer Science - Dean\'s List - Science Scholar',
         start: '2024',
-        end: '2028',
-        gpa: '4.33/4.33',
+        end: '2027',
+        gpa: '4.0/4.0',
         id: 'work1',
     },
 ]
