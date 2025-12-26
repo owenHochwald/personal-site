@@ -170,7 +170,7 @@ export const EDUCATION: Education[] = [
     {
         school: 'University of British Columbia',
         link: "https://www.cs.ubc.ca/about/numbers",
-        degree: 'BSc Computer Science - Dean\'s List - Science Scholar',
+        degree: 'BSc Computer Science - Dean\'s List - Trek Excellence Scholar',
         start: '2024',
         end: '2027',
         gpa: '4.0/4.0',
