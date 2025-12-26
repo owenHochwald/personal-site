@@ -185,6 +185,12 @@ export const BLOG_POSTS: BlogPost[] = [
         link: '/blog/exploring-dry-eye-disease-dataset',
         uid: 'blog-1',
     },
+    {
+        title: 'Why you should read more textbooks.',
+        description: 'An argument in favor of technical depth.',
+        link: '/blog/why-you-should-read-more-textbooks',
+        uid: 'blog-2',
+    },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
