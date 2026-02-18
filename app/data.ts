@@ -71,6 +71,22 @@ export const PROJECTS: Project[] = [
         id: 'projectanilistwrapped'
     },
     {
+        name: 'Egg Carton',
+        description:
+            'Serverless secret manager service built for developers who work with AI agents.',
+        link: 'https://github.com/owenHochwald/egg-carton',
+        video: "eggcarton.mov",
+        id: 'projecteggcarton'
+    },
+    {
+        name: 'Clip P2p',
+        description:
+            'A peer-to-peer universal clipboard for your terminal. Copy on one machine, paste on another..',
+        link: 'https://github.com/owenHochwald/clipp2p',
+        video: "clipp2p.mp4",
+        id: 'projectclipp2p'
+    },
+    {
         name: 'Shakespeare GPT',
         description:
             'Custom trained transformer based on the paper "Attention Is All You Need" to generate original Shakespearean-style text using PyTorch.',
@@ -158,8 +174,8 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
         company: 'Insomniac Design, Inc.',
         title: 'Backend / Machine Learning Engineer Intern',
         start: 'June 2023',
-        end: 'Aug 2023',
         technologies: ["Python", "FastAPI", "Lbl2Vec", "Unsupervised Sentiment Analysis", "API Development"],
+        end: 'Aug 2023',
         link: 'https://insomniacdesign.com/',
         id: 'work3',
     },
