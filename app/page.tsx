@@ -318,6 +318,9 @@ export default function Personal() {
                                     <p className="text-zinc-500 dark:text-zinc-400">
                                         {post.description}
                                     </p>
+                                    <p className="text-xs text-zinc-400 dark:text-zinc-500">
+                                        {post.date} · {post.readingTime} min read
+                                    </p>
                                 </div>
                             </Link>
                         ))}
@@ -331,10 +334,11 @@ export default function Personal() {
             >
                 <h3 className="mb-5 text-lg font-medium">Connect</h3>
                 <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-                    Feel free to contact me :) {' '}
+                    I'm looking for high-signal engineering roles — distributed systems, infra, or anything where performance matters. Graduating UBC 2027. If you're building something hard,{' '}
                     <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
-                        {EMAIL}
+                        reach out
                     </a>
+                    .
                 </p>
                 <div className="flex items-center justify-start space-x-3">
                     {SOCIAL_LINKS.map((link) => (
