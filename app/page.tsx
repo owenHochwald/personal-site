@@ -1,5 +1,6 @@
 'use client'
-import { motion } from 'motion/react'
+import { useRef } from 'react'
+import { motion, useInView } from 'motion/react'
 import { XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
@@ -142,6 +143,23 @@ function MagneticSocialLink({
     )
 }
 
+function SectionHeading({ children }: { children: React.ReactNode }) {
+    const ref = useRef<HTMLDivElement>(null)
+    const inView = useInView(ref, { once: true, margin: '-50px' })
+    return (
+        <div ref={ref} className="mb-5 inline-block">
+            <h3 className="text-lg font-medium">{children}</h3>
+            <motion.span
+                className="block h-[1px] bg-zinc-900 dark:bg-zinc-100"
+                style={{ transformOrigin: 'left' }}
+                initial={{ scaleX: 0 }}
+                animate={inView ? { scaleX: 1 } : {}}
+                transition={{ duration: 0.4, ease: 'easeOut' }}
+            />
+        </div>
+    )
+}
+
 export default function Personal() {
     return (
 
@@ -162,7 +180,7 @@ export default function Personal() {
                 variants={VARIANTS_SECTION}
                 transition={TRANSITION_SECTION}
             >
-                <h3 className="mb-5 text-lg font-medium">Education</h3>
+                <SectionHeading>Education</SectionHeading>
                 <div className="flex flex-col space-y-2">
                     {EDUCATION.map((school) => (
                         <a
@@ -203,7 +221,7 @@ export default function Personal() {
                 variants={VARIANTS_SECTION}
                 transition={TRANSITION_SECTION}
             >
-                <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
+                <SectionHeading>Work Experience</SectionHeading>
                 <div className="flex flex-col space-y-2">
                     {WORK_EXPERIENCE.map((job) => (
                         <a
@@ -255,7 +273,7 @@ export default function Personal() {
                 variants={VARIANTS_SECTION}
                 transition={TRANSITION_SECTION}
             >
-                <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+                <SectionHeading>Selected Projects</SectionHeading>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     {PROJECTS.map((project) => (
                         <div key={project.name} className="group space-y-2">
@@ -303,7 +321,7 @@ export default function Personal() {
                 variants={VARIANTS_SECTION}
                 transition={TRANSITION_SECTION}
             >
-                <h3 className="mb-3 text-lg font-medium">Blog</h3>
+                <SectionHeading>Blog</SectionHeading>
                 <div className="flex flex-col space-y-0">
                     <AnimatedBackground
                         enableHover
@@ -322,7 +340,10 @@ export default function Personal() {
                                 data-id={post.uid}
                             >
                                 <div className="flex flex-col space-y-1">
-                                    <h4 className="font-normal dark:text-zinc-100">
+                                    <h4
+                                        className="font-normal dark:text-zinc-100"
+                                        style={{ viewTransitionName: `blog-title-${post.link.split('/').pop()}` }}
+                                    >
                                         {post.title}
                                     </h4>
                                     <p className="text-zinc-500 dark:text-zinc-400">
@@ -342,7 +363,7 @@ export default function Personal() {
                 variants={VARIANTS_SECTION}
                 transition={TRANSITION_SECTION}
             >
-                <h3 className="mb-5 text-lg font-medium">Connect</h3>
+                <SectionHeading>Connect</SectionHeading>
                 <p className="mb-5 text-zinc-600 dark:text-zinc-400">
                     I'm looking for high-signal engineering roles — distributed systems, infra, or anything where performance matters. Graduating UBC 2027. If you're building something hard,{' '}
                     <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
