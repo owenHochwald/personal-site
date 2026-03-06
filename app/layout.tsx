@@ -14,11 +14,20 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-    title: 'Owen Hochwald - Personal website',
+    title: 'Owen Hochwald — Software Engineer',
     description:
-        'A personal website.',
-    verification: { google: "google212fd64ec34b7c1f.html" },
-
+        'CS student at UBC building distributed systems, CLIs, and ML-powered products.',
+    verification: { google: 'google212fd64ec34b7c1f.html' },
+    openGraph: {
+        title: 'Owen Hochwald',
+        description: 'Software Engineer · UBC Computer Science',
+        images: [{ url: '/og', width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Owen Hochwald',
+        images: ['/og'],
+    },
 }
 
 const geist = Geist({
