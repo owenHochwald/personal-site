@@ -4,6 +4,7 @@ import { TextLoop } from '@/components/ui/text-loop'
 import { MonitorIcon, MoonIcon, SunIcon } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const THEMES_OPTIONS = [
   {
@@ -70,10 +71,26 @@ export function Footer() {
   return (
     <footer className="mt-24 border-t border-zinc-100 px-0 py-4 dark:border-zinc-800">
       <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-2">
           <TextLoop className="text-xs text-zinc-500">
             <span>Owen Hochwald.</span>
             <span>Based in D.C. and Bay Area</span>
           </TextLoop>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/uses"
+              className="text-xs text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+            >
+              uses
+            </Link>
+            <Link
+              href="/reading"
+              className="text-xs text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+            >
+              reading
+            </Link>
+          </div>
+        </div>
         <div className="text-xs text-zinc-400">
           <ThemeSwitch />
         </div>
