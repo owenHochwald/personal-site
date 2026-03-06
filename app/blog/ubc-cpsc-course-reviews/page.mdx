@@ -1,95 +1,286 @@
-<Cover  
-  src="https://images.unsplash.com/photo-1635295852796-f6867d868156?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  
-  alt="Image depicting the beautiful UBC campus"  
-  caption="Image courtesy of unsplash.com"  
-/>
+import { BlogPostH1 } from '@/components/ui/blog-post-h1'
 
-# Exploring the Intersection of Data Science, Health, and Machine Learning
+<BlogPostH1>UBC Computer Science Course Reviews</BlogPostH1>
 
-Dry Eye Disease (DED) is a prevalent condition affecting millions. Leveraging data science and machine learning, we can uncover the lifestyle factors influencing DED and potentially predict its onset. This project explores the predictive power of key attributes such as sleep quality, sleep duration, eye redness, itchiness, screen time, blue-light filter usage, and eye strain.
+My guide for what I wish I knew navigating the CPSC curriculum at UBC. I've added my review of courses I've taken, including difficulty, enjoyment, and usefulness.
+
+## Quick Rating Scale
+
+- **Difficulty**: 1 (easy) to 5 (brutal)
+- **Enjoyment**: 1 (boring) to 5 (loved it)
+- **Usefulness**: 1 (impractical) to 5 (extremely practical)
+
+---
+## CPSC 110
+**Computation, Programs, and Programming**
+
+### Overview
+Very much an introductory course where you spend most of your time solving short little programming exercises. While initially I didn't see the value this class had, looking back at the lessons and concepts they reinforced, paying attention and trying hard can really set you up for a successful time at UBC.
+
+### Course Details
+- **Language**: Racket
+- **Format**: Flipped classroom (video-based learning)
+
+### Ratings
+| Metric | Rating | Notes |
+|--------|--------|-------|
+| **Difficulty** | 4 | Honestly for an intro class, they went into some interesting / challenging things (trees, graphs, tail recursion...) |
+| **Enjoyment** | 4 | I didn't enjoy the teaching style, but I liked the language choice and content! |
+| **Usefulness** | 3? | If you just try to get through this class its a 1, but if you really focus on the coding best practices they teach, its a 4-5. |
+
+### Key Takeaways
+- The 3 hour mandatory weekly lab is the worst.... make sure to review your PA beforehand.
+- PA 9 is insanely difficult....
+- Spending time really understanding trees, graphs, and recursion will really pay off when you get to CPSC 221!
+
+### Tips
+This class is great for learning HOW to solve the harder problems you'll find later on and teaching how to approach difficult things. I enjoyed it, but I always remember it as a class I had to put in A LOT of time for.
 
 ---
 
-## Unveiling Health Insights Through Data Science
+## CPSC 121
+**Models of Computation**
 
-Data science is transforming healthcare by revealing hidden patterns in complex datasets. In this project, we use R to visualize and model relationships in a comprehensive DED dataset. Some highlights include:
+### Overview
+In the moment, this will probably be your least favorite course... It focuses a lot on abstract concepts and theory when you thought you were getting a good old CS class.
 
-- **Data-Driven Insights**: Visualizing correlations between lifestyle choices and ocular health.
-- **Predictive Modeling**: Utilizing KNN (K-Nearest Neighbors) to forecast the risk or severity of DED.
-- **Actionable Analytics**: Informing early detection strategies and personalized treatment approaches.
+### Course Details
+- **Focus**: Logic, proofs, truth tables, circuits
+- **Format**: Lectures + labs (circuit building)
 
----
+### Ratings
+| Metric | Rating | Notes |
+|--------|--------|-------|
+| **Difficulty** | 5 | The average on the final was like a 30 and they had to do some major scaling... |
+| **Enjoyment** | 4 | I struggled a lot for this class, but finally understanding concepts was the best feeling! |
+| **Usefulness** | 2 | Yes you won't be doing symbolic logic proofs at Meta most likely, but all the concepts are really just setup for OS classes and the later math classes at UBC. |
 
-## The Role of Predictive Analytics in Healthcare
+### Key Takeaways
+- Really getting familar with the binary stuff pays off throughout your entire time at UBC!
+- Hardware side is cool, but not the most useful if you're more interested in SWE like me.
+- They suck, but mastering the proofs is well worth it.
 
-Machine learning is not only a tool for data analysis but also a means to drive proactive healthcare decisions. For example:
-
-- **Early Detection**: Predictive models can identify individuals at higher risk of developing DED, enabling timely intervention.
-- **Personalized Treatment**: Data insights help in tailoring treatments based on lifestyle factors.
-- **Resource Optimization**: Healthcare providers can better allocate resources by understanding the underlying risk factors.
-
----
-
-## Project Methodology: From Data Exploration to Prediction
-
-This project integrates several data science practices to create a comprehensive analysis of DED:
-
-### Data Exploration and Preprocessing
-
-1. **Data Loading & Cleaning**: Initial exploration and handling of missing values.
-2. **Feature Engineering**: Standardizing and normalizing variables for accurate analysis.
-3. **Statistical Summaries**: Gaining an overview of key attributes through summary statistics.
-
-### Visualizations: Seeing the Unseen
-
-- **Univariate Analysis**: Histograms for sleep duration and screen time; bar charts for blue-light filter usage.
-- **Bivariate Analysis**: Scatter plots and correlation heatmaps to reveal relationships, such as between sleep quality and eye strain.
-- **Multivariate Visualizations**: Pair plots to understand how multiple factors interact in relation to DED.
-
-### Predictive Modeling with KNN
-
-- **Model Building**: Splitting data into training and testing sets to build the KNN model.
-- **Hyperparameter Tuning**: Optimizing the 'k' value with cross-validation.
-- **Performance Evaluation**: Using metrics like accuracy, precision, and recall to gauge model effectiveness.
+### Tips
+- Grind practice problems -> The weekly exams make it easy to fall behind so don't get caught off guard.
 
 ---
 
-## Challenges and Opportunities in Predictive Health Analytics
+## CPSC 210
+**Software Construction**
 
-While data science provides powerful tools, there are challenges to overcome:
+### Overview
+- A super fun OOP class where for the first time in uni, you get to build a project! This was one of my favorite classes at UBC.
 
-### Challenges
+### Course Details
+- **Language**: Java
+- **Focus**: Object-Oriented Programming (OOP)
+- **Assessment**: Project milestones + exams
+- **Format**: 2 conceptual midterms and 2 "practical" (coding) midterms
 
-- **Data Quality**: Ensuring accuracy in self-reported lifestyle metrics.
-- **Model Limitations**: KNN may have limitations with high-dimensional data.
-- **Generalizability**: Findings may be specific to the dataset and require validation in diverse populations.
+### Ratings
+| Metric | Rating | Notes |
+|--------|--------|-------|
+| **Difficulty** | 2 | The lecture material I found was both easy to understand but also pretty cool from a development perspective. It really felt like my first actual CS class. |
+| **Enjoyment** | 5 | I really liked the design pattern stuff and being able to actually apply my skills in a project I had complete freedom with. Tons of practice problems for the course as well. |
+| **Usefulness** | 4 | The skills learned in this class are directly applicable to real-world software development, and even during some of my interviews. |
 
-### Opportunities
+### Key Takeaways
+- Getting comfortable with Java can easily transition into a Spring Boot project after the class to get some nice resume projects going for internships!
+- Knowing the design patterns well pays off during interviews (I've had places ask about OOP concepts from this class)!
+- Workload isn't too bad (lectures are pretty chill) but make sure to start project milestones early.
 
-- **Innovative Diagnostics**: Combining machine learning with clinical data can revolutionize early detection.
-- **Personalized Health**: Tailoring interventions based on individual lifestyle data.
-- **Interdisciplinary Collaboration**: Bringing together data scientists, healthcare professionals, and researchers to tackle DED.
-
----
-
-## Conclusion
-
-The fusion of data science and healthcare holds tremendous promise. By leveraging R for exploratory analysis and predictive modeling, we can uncover the intricate links between lifestyle factors and Dry Eye Disease. This project not only highlights the power of data-driven insights but also paves the way for early intervention and personalized treatment strategies.
-
----
-
-### Questions for Reflection
-
-- How can we enhance data quality and overcome biases in health-related datasets?
-- What additional machine learning techniques could further improve predictive accuracy in clinical settings?
-
-### Further Reading
-
-- [Dataset](https://www.kaggle.com/datasets/dakshnagra/dry-eye-disease)
-- [K-Nearest Neighbors](https://parsnip.tidymodels.org/reference/nearest_neighbor.html)
+### Tips
+- Budget extra time for the first project milestone (find an idea you actually care about and feel ownership with).
 
 ---
 
-### Music for Inspiration
+## CPSC 213
+**Introduction to Computer Systems**
 
-For those long coding sessions, why not enjoy some ambient tunes? Check out _"Ambient Health"_ by Boards of Canada—a blend of creativity and tranquility to keep you inspired.
+### Overview
+You either love it or you hate it. Goes into hardware, ISAs, assembly, and multi-threading.
+
+### Course Details
+- **Languages**: Assembly, C, Java (for a little bit)
+- **Assessment**: Assignments, exams
+
+### Ratings
+| Metric | Rating | Notes |
+|--------|--------|-------|
+| **Difficulty** | 4 | The material can be quite challenging, especially the assembly language concepts and multi-threading assignments. |
+| **Enjoyment** | 5 | Exposed me to a lot of new concepts and ways of thinking about problems. |
+| **Usefulness** | 5 | Understanding computer systems is crucial for any CS major and not something you think about all the time if you're used to working with high level langs all the time. |
+
+### Key Takeaways
+- Multi-threading stuff was super cool for me and inspired Volt!
+- I enjoyed the C stuff a lot more than the Assembly stuff, but both were really interesting and useful to learn and opened my eyes to how they go hand in hand.
+
+### Tips
+- Consider learning C before the course, its not required but is one less thing to worry about in such a big course.
+- Use the simulator to mess around with and try things out for yourself!
+
+---
+
+## CPSC 221
+**Basic Algorithms and Data Structures**
+
+### Overview
+I took this over the summer and this had to be the most difficult course I've taken at UBC. This by far though was the most useful course I've taken.
+
+### Course Details
+- **Language**: C++
+- **Focus**: Algorithms, data structures
+- **Assessment**: Assignments, exams
+
+### Ratings
+| Metric | Rating | Notes |
+|--------|--------|-------|
+| **Difficulty** | 5 | You've seen the memes, its just like that... The PAs were pretty tough as well. |
+| **Enjoyment** | 5 | DSA is my favorite part of CS! |
+| **Usefulness** | 5 | The class that will directly help you get employed. |
+
+### Key Takeaways
+- Find a good partner for the PAs... they're rough
+- C++ is cool, but they don't really teach it. It's definitely worth watching some YouTube guides beforehand. 
+- Do the NeetCode 150 while taking the class to reinforce concepts!!
+- The Union-Find concepts are a niche thing that appear more often than you'd think.
+
+---
+
+## CPSC 304
+**Introduction to Databases**
+
+### Overview
+A lot of people see this as sort of a "filler" course, but I think its super super important. I had a bunch of experience with DBs in the past, but never was formally taught the best practice concepts and SQL with the connection back to Relational Algebra.
+
+### Course Details
+- **Focus**: SQL, relational algebra
+- **Assessment**: Project, exams
+
+### Ratings
+| Metric | Rating | Notes |
+|--------|--------|-------|
+| **Difficulty** | 3 | If you can get through the Normalization and Relational Algebra stuff, everything else is a breeze. |
+| **Enjoyment** | 4 | I thought the project wasn't the most organized, but I really enjoyed learning about all the design and theory. Definitely helped with with jobs and projects. |
+| **Usefulness** | 5 | Understanding databases is crucial and this course gives a super strong all around foundation. Although, don't expect it to cover super advance things, no-sql, sharding, or distributed dbs. |
+
+### Key Takeaways
+- Find a good group you can work with for your project (they grade it easily).
+- Normalization and table design stuff is super important (if I knew some of this stuff earlier, I wouldn't have failed one of my eariler interviews lol).
+- Its easy to forget SQL queries, but this course gives a good understanding to pick it back up whenever you need it (and validate what AI gives you when you ask it to write SQL queries for you).
+
+### Tips
+- Projects can be minimalist and still earn high grades if rubric requirements are met
+- Focus on understanding the concepts and design principles, as they are more important than memorizing specific SQL syntax (especially with the cross-product and aggregate functions).
+
+
+---
+
+## CPSC 310
+**Software Engineering**
+
+### Overview
+Sort of a follow up of CPSC 210? Focuses more on being a good employee in the workplace covering things like ethics, software processes, and testing.
+### Course Details
+- **Focus**: Software development best practices, ethics, testing
+- **Language**: TypeScript
+
+### Ratings
+| Metric | Rating | Notes |
+|--------|--------|-------|
+| **Difficulty** | 1 | Very easy course, mostly common sense stuff with exams being literally true/false questions. |
+| **Enjoyment** | 1 | Not very engaging, with a tedious course project at the core. |
+| **Usefulness** | 2 | Most concepts really just felt like common sense, or things you could learn on the job. |
+
+### Key Takeaways
+- Understanding different software trends, patterns, and processes is an important skill to have. Although, I do think if you're someone who is working hard outside of school as well, you'll probably already know the things this course covers by the time you get to it.
+- Testing is a key part of the development process and should be prioritized. There are tons of different testing variants as well that all have different uses (smoke, integration, unit, A/B, etc.).
+
+### Tips
+- Find a good partner for the project, as it can be quite tedious and time-consuming so having someone you can trust to split the work up with helps a bunch.
+
+---
+
+## CPSC 313
+**Computer Hardware and Operating Systems**
+
+### Overview
+Dives much deeper into the processor architecture, memory, and caching.
+
+### Course Details
+- **Languages**: Assembly, C
+- **Assessment**: Assignments, labs, exams
+- **Format**: Pre-class + in-class work + assignments
+
+### Ratings
+| Metric | Rating | Notes |
+|--------|--------|-------|
+| **Difficulty** | 3 | This course was challenging, but less so than its prereq, CPSC 213. |
+| **Enjoyment** | 4 | I found everything very cool, but not always focused at times. |
+| **Usefulness** | 4 | Helps with understanding caching all around and opens your eyes to the world of software preformance optimizations. |
+
+### Key Takeaways
+- Everything is a file.
+- Finally understanding why recursion is slower than iteration.
+- A bunch of cool niche performance optimizations that I never would have thought of without taking this class.
+- I feel A LOT more confident in lower level languages after taking this class.
+
+### Tips
+- Textbook readings for me really clicked!
+- Try to spend some time familiarizing yourself with caching, virtual memory, and processor architecture before the course if you can, it will make the content much easier to understand and more engaging.
+
+---
+
+## CPSC 317
+**Introduction to Computer Networking**
+
+### Overview
+This course provides a comprehensive introduction to computer networking, covering key concepts and protocols that underpin the internet and modern communication systems.
+### Course Details
+- **Language**: Python
+- **Focus**: Introduction to ML, scikit-learn
+- **Assessment**: Pair assignments, open-book midterm/final
+- **Format**: [Course structure]
+
+### Ratings
+| Metric | Rating | Notes |
+|--------|--------|-------|
+| **Difficulty** | 4 | The content really never clicked for me when I learned through the teaching staff, but reading the textbook helped a lot. |
+| **Enjoyment** | 5 | Yes, it can be a bit dry at times, but the feeling of being able to implement some of the protocols yourself is amazing. |
+| **Usefulness** | 5 | Makes every single part of SWE easier, you just understand the communication between computers on such a deeper level. |
+
+### Key Takeaways
+- The internet is way more complicated than you think, and understanding how it works is super useful for any software engineer.
+- So many of the weird constructs of languages and SWE is because of the way networking developed!
+- Backend dev. and API creation is way easier when you understand the protocols and how the internet works. 
+- I understand the 100 different ways networks could fail and why security is so important now.
+---
+
+### CPSC 320
+**Intermediate Algorithm Design and Analysis**
+
+### Overview
+I took this course with Steve Wolfman, who is my favorite professor at UBC. This course is a follow up to CPSC 221 and goes into more advanced algorithms and data structures. The course is very problem-solving oriented and the assessments reflect that with quizzes that ask you to write pseudocode for different problems.k
+
+### Course Details
+- **Focus**: Problem-solving, algorithm analysis
+- **Format**: Problem-solving oriented lectures
+
+### Ratings
+| Metric | Rating | Notes |
+|--------|--------|-------|
+| **Difficulty** | 5 | They had a few issues pivoiting to the online quiz system where difficulty didn't scale. |
+| **Enjoyment** | 4 | My prof was amazing. |
+| **Usefulness** | 4 | This course really deepened my understanding of algorithms and data structures. |
+
+### Key Takeaways
+- Dynamic Programming is the coolest DSA concept, but also so hard to understand.
+- If you thought CPSC 221 covered most of the algorithms, just wait, theres more....
+- I thought it was crazy that there are still problems that are "too hard" for our to computationally solve.
+
+### Tips
+- Textbook reading is a big help as they will pull problems from the unassigned readings!
+- Try to do LeetCode while taking the course!
+
+## Final Thoughts
+I've loved every CS course I've taken at UBC and I hope that these reviews help you navigate your own journey! My final tip is to create a spreadsheet to plan our your courses semester by semester ahead of time. This helps to make sure you're on graduation track and exploring your interests ahead of time!

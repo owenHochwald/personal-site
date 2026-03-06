@@ -167,7 +167,7 @@ export const BLOG_POSTS: BlogPost[] = [
         readingTime: 4,
     },
     {
-        title: 'UBC CPSC course-reviews',
+        title: 'UBC CPSC Course Review',
         description: 'A review of courses I\'ve taken in the UBC CPSC curriculum.',
         link: '/blog/ubc-cpsc-course-reviews',
         uid: 'blog-3',
