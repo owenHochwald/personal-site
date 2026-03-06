@@ -21,7 +21,7 @@ const USES: Section[] = [
     items: [
       { name: 'VS Code', description: 'with Vim keybindings' },
       { name: 'Geist Mono', description: 'font' },
-      { name: 'Tokyo Night', description: 'theme' },
+      { name: 'Rosé Pine Moon', description: 'theme' },
     ],
   },
   {

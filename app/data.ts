@@ -31,20 +31,14 @@ type BlogPost = {
     description: string
     link: string
     uid: string
+    date: string
+    readingTime: number
 }
 
 type SocialLink = {
     label: string
     link: string
 }
-
-type Now = {
-    building: string
-    learning: string
-    obsessing: string
-    updated: string
-}
-
 export const PROJECTS: Project[] = [
     {
         name: 'Volt',
@@ -158,22 +152,20 @@ export const EDUCATION: Education[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
     {
-        title: 'How can we predict dry eyes?',
-        description: 'Exploratory data analysis with a KNN model in R.',
-        link: '/blog/exploring-dry-eye-disease-dataset',
-        uid: 'blog-1',
-    },
-    {
         title: 'Why you should read more textbooks.',
         description: 'An argument in favor of technical depth.',
         link: '/blog/why-you-should-read-more-textbooks',
         uid: 'blog-2',
+        date: 'Sep 2025',
+        readingTime: 4,
     },
     {
         title: 'UBC CPSC course-reviews',
-        description: "A review of courses I've taken in the UBC CPSC curriculum.",
+        description: 'A review of courses I\'ve taken in the UBC CPSC curriculum.',
         link: '/blog/ubc-cpsc-course-reviews',
         uid: 'blog-3',
+        date: 'Feb 2026',
+        readingTime: 5,
     },
 ]
 
