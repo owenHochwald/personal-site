@@ -171,7 +171,6 @@ export function CommandPalette() {
                     <div className="flex items-center gap-3 border-t border-zinc-100 px-3 py-2 text-[11px] text-zinc-400 dark:border-zinc-800 dark:text-zinc-500">
                         <span><kbd className="rounded bg-zinc-100 px-1 py-0.5 font-mono dark:bg-zinc-800">↑↓</kbd> navigate</span>
                         <span><kbd className="rounded bg-zinc-100 px-1 py-0.5 font-mono dark:bg-zinc-800">↵</kbd> select</span>
-                        <span><kbd className="rounded bg-zinc-100 px-1 py-0.5 font-mono dark:bg-zinc-800">esc</kbd> close</span>
                         <span className="ml-auto opacity-60">vim: jklh</span>
                     </div>
                 </Command>

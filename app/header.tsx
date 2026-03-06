@@ -60,10 +60,12 @@ export function Header() {
                         <span>things that ship</span>
                     </TextLoop>
                 </p>
+                <div className="mt-1.5">
+                    <CmdKHint />
+                </div>
             </div>
             <div className="flex flex-col items-end gap-2">
                 <WireframeOrb />
-                <CmdKHint />
             </div>
         </header>
     )
