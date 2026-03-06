@@ -3,6 +3,15 @@ import { GlitchText } from '@/components/ui/glitch-text'
 import { TextLoop } from '@/components/ui/text-loop'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import dynamic from 'next/dynamic'
+
+const WireframeOrb = dynamic(
+    () =>
+        import('@/components/ui/wireframe-orb').then((m) => ({
+            default: m.WireframeOrb,
+        })),
+    { ssr: false }
+)
 
 function CmdKHint() {
     const [isMac, setIsMac] = useState(true)
@@ -52,7 +61,10 @@ export function Header() {
                     </TextLoop>
                 </p>
             </div>
-            <CmdKHint />
+            <div className="flex flex-col items-end gap-2">
+                <WireframeOrb />
+                <CmdKHint />
+            </div>
         </header>
     )
 }
