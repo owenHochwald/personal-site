@@ -216,6 +216,12 @@ export const BLOG_POSTS: BlogPost[] = [
         link: '/blog/why-you-should-read-more-textbooks',
         uid: 'blog-2',
     },
+    {
+        title: 'UBC CPSC course-reviews',
+        description: 'A review of courses I\'ve taken in the UBC CPSC curriculum.',
+        link: '/blog/ubc-cpsc-course-reviews',
+        uid: 'blog-3',
+    }
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
