@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/morphing-dialog'
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
+import { TerminalBio } from '@/components/ui/terminal-bio'
 import {
     PROJECTS,
     WORK_EXPERIENCE,
@@ -151,16 +152,12 @@ export default function Personal() {
             initial="hidden"
             animate="visible"
         >
-            <motion.section
+            {/* <motion.section
                 variants={VARIANTS_SECTION}
                 transition={TRANSITION_SECTION}
             >
-                <div className="flex-1">
-                    <p className="text-zinc-600 dark:text-zinc-400">
-                        I build things that are fast, correct, and valuable. Studying CS at UBC (Dean&apos;s List, 4.0), incoming Capital One SWE intern. I like distributed systems, terminal tooling, and hard problems.
-                    </p>
-                </div>
-            </motion.section>
+                <TerminalBio />
+            </motion.section> */}
             <motion.section
                 variants={VARIANTS_SECTION}
                 transition={TRANSITION_SECTION}
@@ -254,21 +251,33 @@ export default function Personal() {
             </motion.section>
 
             <motion.section
+                id="projects"
                 variants={VARIANTS_SECTION}
                 transition={TRANSITION_SECTION}
             >
                 <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     {PROJECTS.map((project) => (
-                        <div key={project.name} className="space-y-2">
-                            {project.video ? (
-                                <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                        <div key={project.name} className="group space-y-2">
+                            <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                                {project.video ? (
                                     <ProjectVideo src={project.video} />
-                                </div>
-                            ) : (
-                                <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                                ) : (
                                     <ProjectPlaceholderPattern />
-                                </div>)}
+                                )}
+                                {project.technologies && project.technologies.length > 0 && (
+                                    <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-1 translate-y-2 opacity-0 transition-all duration-200 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+                                        {project.technologies.map((tech, i) => (
+                                            <span
+                                                key={i}
+                                                className="inline-flex items-center rounded-full bg-zinc-900/80 px-2 py-0.5 text-xs font-medium text-zinc-100 backdrop-blur-sm dark:bg-zinc-100/80 dark:text-zinc-900"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
                             <div className="px-1">
                                 <a
                                     className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
@@ -290,6 +299,7 @@ export default function Personal() {
 
 
             <motion.section
+                id="blog"
                 variants={VARIANTS_SECTION}
                 transition={TRANSITION_SECTION}
             >
