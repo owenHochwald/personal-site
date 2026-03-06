@@ -6,6 +6,7 @@ import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
 import { Particles } from '@/components/ui/particles'
 import { Analytics } from "@vercel/analytics/next"
+import { CommandPalette } from '@/components/ui/command-palette'
 
 export const viewport: Viewport = {
     width: 'device-width',
@@ -63,6 +64,7 @@ export default function RootLayout({
                             <Particles className="absolute h-full w-full" />
                         </div>
 
+                        <CommandPalette />
                         <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
 
                             <Header />

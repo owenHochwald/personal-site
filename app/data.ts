@@ -4,6 +4,7 @@ type Project = {
     link: string
     video?: string
     id: string
+    technologies?: string[]
 }
 
 type WorkExperience = {
@@ -47,6 +48,7 @@ export const PROJECTS: Project[] = [
         link: 'https://github.com/owenHochwald/Volt',
         video: '/volt.mp4',
         id: 'projectvolt',
+        technologies: ['Go', 'TUI', 'BubbleTea', 'Github Actions', 'HTTP'],
     },
     {
         name: 'RecMind',
@@ -55,6 +57,7 @@ export const PROJECTS: Project[] = [
         link: 'https://github.com/owenHochwald/rec-mind',
         video: '/recmind_demo.mp4',
         id: 'project0',
+        technologies: ['Go', 'RabbitMQ', 'pgvector', 'RAG'],
     },
     {
         name: 'Aniwatch Wrapped',
@@ -63,6 +66,7 @@ export const PROJECTS: Project[] = [
         link: '',
         video: 'anilist_wrapped.mp4',
         id: 'projectanilistwrapped',
+        technologies: ['TypeScript', 'Next.js', 'GraphQL'],
     },
     {
         name: 'AdmitifyAI',
@@ -71,6 +75,7 @@ export const PROJECTS: Project[] = [
         link: 'https://admitifyai.com/',
         video: 'admitifyResumeDemo.mp4',
         id: 'project1',
+        technologies: ['TypeScript', 'Next.js', 'React'],
     },
     {
         name: 'Egg Carton',
@@ -79,6 +84,7 @@ export const PROJECTS: Project[] = [
         link: 'https://github.com/owenHochwald/egg-carton',
         video: 'eggcarton.mov',
         id: 'projecteggcarton',
+        technologies: ['TypeScript', 'Serverless', 'AWS'],
     },
     {
         name: 'Shakespeare GPT',
@@ -87,6 +93,7 @@ export const PROJECTS: Project[] = [
         link: 'https://github.com/owenHochwald/shakespeare-gpt/',
         video: '/gpt_demo.mp4',
         id: 'projectshakespeare',
+        technologies: ['Python', 'PyTorch', 'Transformers'],
     },
 ]
 
