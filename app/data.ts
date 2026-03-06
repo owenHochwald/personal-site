@@ -37,113 +37,71 @@ type SocialLink = {
     label: string
     link: string
 }
+
+type Now = {
+    building: string
+    learning: string
+    obsessing: string
+    updated: string
+}
+
 export const PROJECTS: Project[] = [
-    {
-        name: "RecMind",
-        description: "A real-time article knowledge base recommendation system using a Go backend, RabbitMQ, and a RAG pipeline. Features a pub/sub ingestion point and embedded vector store for fast semantic search.",
-        link: 'https://github.com/owenHochwald/rec-mind',
-        video: "/recmind_demo.mp4",
-        id: 'project0'
-    },
-    {
-        name: 'AdmitifyAI',
-        description:
-            '5 person team collaberative full-stack project to build a tool taking a holistic approach to college admissions guidance, powered by AI-driven insights written in Typescript, Nextjs, and React.',
-        link: 'https://admitifyai.com/',
-        video:
-            'admitifyResumeDemo.mp4',
-        id: 'project1',
-    },
     {
         name: 'Volt',
         description:
-            'Terminal native HTTP / Load testing client w/ 200k req/sec with VIM style keybindings, acting as a Postman & K6 Alternative. Built in Golang w/ 130+ stars on GitHub.',
+            '130-star terminal HTTP load tester. Hits 200k req/sec with Vim keybindings — a Postman and k6 alternative built natively for the shell. Written in Go.',
         link: 'https://github.com/owenHochwald/Volt',
-        video: "volt.mp4",
-        id: 'projectvolt'
+        video: 'volt.mp4',
+        id: 'projectvolt',
+    },
+    {
+        name: 'RecMind',
+        description:
+            'Real-time recommendation engine using Go, RabbitMQ pub/sub, and a RAG pipeline with an embedded vector store for sub-10ms semantic search over articles.',
+        link: 'https://github.com/owenHochwald/rec-mind',
+        video: '/recmind_demo.mp4',
+        id: 'project0',
     },
     {
         name: 'Aniwatch Wrapped',
         description:
-            'Built viral statistics, data engine platform reaching 1K+ users in first 24 hours, processing personalized year-in-review with 15+ metrics. Build with TypeScript/Next.js with GraphQL API integration, caching layers to bypass rate limits, and dynamic user-level routing.',
+            'Went viral on first deploy — 1,000 users in 24 hours. Spotify Wrapped for anime: 15+ personalized year-in-review metrics via GraphQL with caching to bypass rate limits.',
         link: '',
-        video: "anilist_wrapped.mp4",
-        id: 'projectanilistwrapped'
+        video: 'anilist_wrapped.mp4',
+        id: 'projectanilistwrapped',
+    },
+    {
+        name: 'AdmitifyAI',
+        description:
+            'Led frontend on a 5-person team building an AI-driven college admissions platform. TypeScript, Next.js, shipped to production.',
+        link: 'https://admitifyai.com/',
+        video: 'admitifyResumeDemo.mp4',
+        id: 'project1',
     },
     {
         name: 'Egg Carton',
         description:
-            'Serverless secret manager service built for developers who work with AI agents.',
+            'Serverless secret manager for developers shipping AI agents. Store, rotate, and retrieve API keys without leaking them into model context.',
         link: 'https://github.com/owenHochwald/egg-carton',
-        video: "eggcarton.mov",
-        id: 'projecteggcarton'
-    },
-    {
-        name: 'Clip P2p',
-        description:
-            'A peer-to-peer universal clipboard for your terminal. Copy on one machine, paste on another..',
-        link: 'https://github.com/owenHochwald/clipp2p',
-        video: "clipp2p.mp4",
-        id: 'projectclipp2p'
+        video: 'eggcarton.mov',
+        id: 'projecteggcarton',
     },
     {
         name: 'Shakespeare GPT',
         description:
-            'Custom trained transformer based on the paper "Attention Is All You Need" to generate original Shakespearean-style text using PyTorch.',
+            'Trained a transformer from scratch on the complete works of Shakespeare, following "Attention Is All You Need". Pure PyTorch, no pretrained weights.',
         link: 'https://github.com/owenHochwald/shakespeare-gpt/',
-        video:
-            '/gpt_demo.mp4',
-        id: 'project1',
+        video: '/gpt_demo.mp4',
+        id: 'projectshakespeare',
     },
-
-    {
-        name: 'Atlas of Westeros',
-        description: 'Full-featured Java Swing GUI map application for Game of Thrones. Developed with TDD (97% coverage) with OOP principles in mind.',
-        link: 'https://github.com/owenHochwald/atlas-of-westeros/',
-        video:
-            '/westeros.mov',
-        id: 'project1.5',
-    },
-    {
-        name: 'Aftrbrnr',
-        description: 'Open-source, company-wide time-tracking end-to-end web app built with NextJs and PostgreSQL.',
-        link: 'https://www.aftrbrnr.com/',
-        video:
-            '/aftrbrnr_demo.mp4',
-        id: 'project2',
-    },
-    {
-        name: 'Throne Tracker',
-        description: 'A real-time bathroom queue management for roomates. No more akward door kocking. Ever. Uses Golang, Typescript, Redis, and React.',
-        link: 'https://github.com/owenHochwald/Throne-Tracker',
-        video: "",
-        id: "projectThroneTracker"
-    },
-    {
-        name: 'Graphite - Visual Grid Simulator',
-        description: 'Visual React + Bun app to simulate pathfinding algorithms and on the fly maze generation on a grid.',
-        link: '',
-        video:
-            '/graph-traversal.mp4',
-        id: 'project2',
-    },
-    {
-        name: 'Pawsture Pal',
-        description: 'Chrome extension to promote better posture habits with personalized reminders and friendly cat animations.',
-        link: 'https://chromewebstore.google.com/detail/Pawsture%20Pal/ghdnbollliflcjoeglpnlecdhcbcbopf',
-        video:
-            '/extension_demo.mp4',
-        id: 'project2',
-    },
-
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
     {
-        company: "Incoming - Capital One",
-        title: "Software Engineer Intern",
-        start: "May 2026",
-        end: "August 2026",
+        company: 'Incoming - Capital One',
+        title: 'Software Engineer Intern',
+        start: 'May 2026',
+        end: 'August 2026',
         technologies: [],
         link: 'https://www.capitalone.com/',
         id: 'work4',
@@ -153,9 +111,8 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
         title: 'Software Developer',
         start: 'September 2025',
         end: 'Present',
-        technologies: ["TypeScript", "AWS SDK", "DynamoDB", "ECS", "Lambda Functions", "React"],
-        link:
-            "https://www.ubclaunchpad.com/",
+        technologies: ['TypeScript', 'AWS SDK', 'DynamoDB', 'ECS', 'Lambda Functions', 'React'],
+        link: 'https://www.ubclaunchpad.com/',
         id: 'work0',
     },
     {
@@ -163,11 +120,8 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
         title: 'Software Engineer Intern',
         start: 'July 2025',
         end: 'March 2026',
-        technologies: ["Kotlin", "Docker", "Nginx", "Spring Boot", "RestAPIs", "TypeScript", "React", "MariaDB"],
-        link:
-            "https://www.fairphrase.com/",
-
-        // 'https://www.viscoglab.psych.ubc.ca/',
+        technologies: ['Kotlin', 'Docker', 'Nginx', 'Spring Boot', 'RestAPIs', 'TypeScript', 'React', 'MariaDB'],
+        link: 'https://www.fairphrase.com/',
         id: 'work1',
     },
     {
@@ -175,7 +129,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
         title: 'Coding Team Co-pilot Internship',
         start: 'April 2025',
         end: 'December 2025',
-        technologies: ["React", "Redux", "MongoDB", "AWS S3", "Express.js", "TypeScript", "RAG", "LangChain"],
+        technologies: ['React', 'Redux', 'MongoDB', 'AWS S3', 'Express.js', 'TypeScript', 'RAG', 'LangChain'],
         link: 'https://www.viscoglab.psych.ubc.ca/',
         id: 'work2',
     },
@@ -183,19 +137,18 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
         company: 'Insomniac Design, Inc.',
         title: 'Backend / Machine Learning Engineer Intern',
         start: 'June 2023',
-        technologies: ["Python", "FastAPI", "Lbl2Vec", "Unsupervised Sentiment Analysis", "API Development"],
+        technologies: ['Python', 'FastAPI', 'Lbl2Vec', 'Unsupervised Sentiment Analysis', 'API Development'],
         end: 'Aug 2023',
         link: 'https://insomniacdesign.com/',
         id: 'work3',
     },
-
 ]
 
 export const EDUCATION: Education[] = [
     {
         school: 'University of British Columbia',
-        link: "https://www.cs.ubc.ca/about/numbers",
-        degree: 'BSc Computer Science - Dean\'s List - Trek Excellence Scholar',
+        link: 'https://www.cs.ubc.ca/about/numbers',
+        degree: "BSc Computer Science - Dean's List - Trek Excellence Scholar",
         start: '2024',
         end: '2027',
         gpa: '4.0/4.0',
@@ -218,10 +171,10 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
         title: 'UBC CPSC course-reviews',
-        description: 'A review of courses I\'ve taken in the UBC CPSC curriculum.',
+        description: "A review of courses I've taken in the UBC CPSC curriculum.",
         link: '/blog/ubc-cpsc-course-reviews',
         uid: 'blog-3',
-    }
+    },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
@@ -244,3 +197,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ]
 
 export const EMAIL = 'owenhochwald@gmail.com'
+
+export const NOW: Now = {
+    building: 'Lorem ipsum dolor sit amet — placeholder for what you\'re building',
+    learning: 'Consectetur adipiscing — placeholder for what you\'re studying',
+    obsessing: 'Sed do eiusmod — placeholder for your current rabbit hole',
+    updated: 'March 2026',
+}
