@@ -19,6 +19,7 @@ const USES: Section[] = [
   {
     title: 'Editor',
     items: [
+      { name: 'Neovim', description: 'with Lazy.nvim' },
       { name: 'VS Code', description: 'with Vim keybindings' },
       { name: 'Geist Mono', description: 'font' },
       { name: 'Rosé Pine Moon', description: 'theme' },
@@ -27,13 +28,12 @@ const USES: Section[] = [
   {
     title: 'Terminal',
     items: [
-      { name: 'Ghostty' },
-      { name: 'zsh + starship', description: 'shell and prompt' },
+      { name: 'ITerm' },
     ],
   },
   {
     title: 'Hardware',
-    items: [{ name: 'MacBook Pro M3 Pro' }],
+    items: [{ name: 'MacBook Air M4' }],
   },
   {
     title: 'Languages',
@@ -46,14 +46,14 @@ const USES: Section[] = [
   {
     title: 'Tools',
     items: [
-      { name: 'Homebrew, Docker, Git' },
-      { name: 'Vercel, Railway', description: 'deployment' },
+      { name: 'Homebrew, Docker, Git, AWS CLI' },
+      { name: 'Vercel, AWS', description: 'deployment' },
       { name: 'Volt', description: 'HTTP load testing CLI — my own project' },
     ],
   },
   {
     title: 'Currently exploring',
-    items: [{ name: 'Rust' }, { name: 'WebAssembly' }],
+    items: [{ name: 'Cloud Computing' }, { name: 'Elixir' }],
   },
 ]
 
