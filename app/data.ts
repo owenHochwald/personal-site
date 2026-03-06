@@ -57,7 +57,7 @@ export const PROJECTS: Project[] = [
     {
         name: 'Volt',
         description:
-            'Terminal native HTTP / Load testing client w/ 200k req/sec with VIM style keybindings, acting as a Postman & K6 Alternative. Built in Golang.',
+            'Terminal native HTTP / Load testing client w/ 200k req/sec with VIM style keybindings, acting as a Postman & K6 Alternative. Built in Golang w/ 130+ stars on GitHub.',
         link: 'https://github.com/owenHochwald/Volt',
         video: "volt.mp4",
         id: 'projectvolt'
@@ -140,6 +140,15 @@ export const PROJECTS: Project[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
     {
+        company: "Incoming - Capital One",
+        title: "Software Engineer Intern",
+        start: "May 2026",
+        end: "August 2026",
+        technologies: [],
+        link: 'https://www.capitalone.com/',
+        id: 'work4',
+    },
+    {
         company: 'UBC Launch Pad',
         title: 'Software Developer',
         start: 'September 2025',
@@ -150,13 +159,13 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
         id: 'work0',
     },
     {
-        company: 'Stealth Startup',
+        company: 'Fairphrase',
         title: 'Software Engineer Intern',
         start: 'July 2025',
-        end: 'September 2025',
+        end: 'March 2026',
         technologies: ["Kotlin", "Docker", "Nginx", "Spring Boot", "RestAPIs", "TypeScript", "React", "MariaDB"],
         link:
-            "",
+            "https://www.fairphrase.com/",
 
         // 'https://www.viscoglab.psych.ubc.ca/',
         id: 'work1',
@@ -165,7 +174,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
         company: 'UBC Visual Cognition Lab',
         title: 'Coding Team Co-pilot Internship',
         start: 'April 2025',
-        end: 'Present',
+        end: 'December 2025',
         technologies: ["React", "Redux", "MongoDB", "AWS S3", "Express.js", "TypeScript", "RAG", "LangChain"],
         link: 'https://www.viscoglab.psych.ubc.ca/',
         id: 'work2',

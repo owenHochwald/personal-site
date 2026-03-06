@@ -10,6 +10,11 @@
 !.yarn/releases
 !.yarn/versions
 
+# AI and Docs
+.claude
+CLAUDE.md
+
+
 # testing
 /coverage
 
