@@ -49,9 +49,9 @@ export const PROJECTS: Project[] = [
     {
         name: 'Volt',
         description:
-            '130-star terminal HTTP load tester. Hits 200k req/sec with Vim keybindings — a Postman and k6 alternative built natively for the shell. Written in Go.',
+            '130+ star terminal HTTP load tester. Hits 200k req/sec with Vim keybindings — a Postman and k6 alternative built natively for the shell. Written in Go.',
         link: 'https://github.com/owenHochwald/Volt',
-        video: 'volt.mp4',
+        video: '/volt.mp4',
         id: 'projectvolt',
     },
     {
@@ -197,10 +197,3 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ]
 
 export const EMAIL = 'owenhochwald@gmail.com'
-
-export const NOW: Now = {
-    building: 'Lorem ipsum dolor sit amet — placeholder for what you\'re building',
-    learning: 'Consectetur adipiscing — placeholder for what you\'re studying',
-    obsessing: 'Sed do eiusmod — placeholder for your current rabbit hole',
-    updated: 'March 2026',
-}
