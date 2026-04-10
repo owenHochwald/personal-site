@@ -174,6 +174,14 @@ export const BLOG_POSTS: BlogPost[] = [
         date: 'Feb 2026',
         readingTime: 5,
     },
+    {
+        title: 'Why I built Mnemo.',
+        description: 'I started reading classics and wanted a deeper way to reflect.',
+        link: '/blog/why-i-built-mnemo',
+        uid: 'blog-4',
+        date: 'Apr 2026',
+        readingTime: 5,
+    },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
