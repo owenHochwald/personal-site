@@ -99,11 +99,11 @@ export const PROJECTS: Project[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
     {
-        company: 'Incoming - Capital One',
+        company: 'Capital One',
         title: 'Software Engineer Intern',
-        start: 'May 2026',
+        start: 'June 2026',
         end: 'August 2026',
-        technologies: [],
+        technologies: ['Python', 'AWS', 'Databricks', 'TypeScript'],
         link: 'https://www.capitalone.com/',
         id: 'work4',
     },
