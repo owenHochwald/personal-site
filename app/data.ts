@@ -188,7 +188,7 @@ export const BLOG_POSTS: BlogPost[] = [
         link: '/blog/my-agentic-coding-system',
         uid: 'blog-5',
         date: 'Jun 2026',
-        readingTime: 7,
+        readingTime: 12,
     },
 ]
 

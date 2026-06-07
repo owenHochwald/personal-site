@@ -1,0 +1,128 @@
+<Cover
+  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  alt="Lines of code on a dark monitor screen"
+  caption="Photo by Unsplash"
+/>
+
+# My Agentic Coding System
+
+I've spent hundreds of hours testing different agentic setups and figured I would share what I've found as a SWE intern for a different perspective.
+
+I primarily work in VSCode and iTerm with Claude Code. Everything here is shaped around that setup.
+
+---
+
+## The more-tools trap
+
+I struggled with the temptation to keep adding things every time I saw a new, hot GitHub repo. More MCP servers, more planning frameworks, more agents layered on top of agents. For a while, it really seemed like more tooling equated to faster shipping.
+
+Eventually I found that isn't the case. The more shiny tools you add, the faster you blow up your context window. There's a skill ceiling to using these tools well, and a basic setup with well-thought-out prompts and a couple of well-chosen integrations will get you more than stacking half-finished tools on top of each other. Simplifying your setup is also significantly cheaper, which will matter more as [providers continue raising prices](https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans/).
+
+Much of what follows focuses on getting sharper with what's already there, and pulling in smaller tools only where they aid the harness rather than replace it.
+
+---
+
+## Zero: before AI touches anything
+
+Before I open Claude Code, before I run any research, I physically write out what I think I'm building to slow myself down and force myself to think.
+
+Who is this for, what does it do, why does it matter, what makes it different from what exists. The goal is to develop my own view and taste, almost like stretching before a sprint.
+
+---
+
+## First: the overview
+
+Once I have a sense of what I'm building, I do a research sweep before a line of code gets written:
+
+- My personal `/research` slash command, ChatGPT, and Claude for deep web searches
+- Checking if it's been done before, and if so, where the gaps are
+- Producing structured documentation I can reference throughout the project
+
+I use ChatGPT for anything I want to keep off my Claude token budget. The output becomes a north star for the whole project and some of the first documentation.
+
+From there, I map out the overarching features in a loose user story style, covering what the user is doing, why, and what needs to be true for it to work. For smaller stories that can be one-shotted, I leave them as a line in `CLAUDE.md`. For anything larger, I create an associated TODO or PHASE file that breaks it down step by step. This becomes the ground truth Claude works from every session, with no re-explaining context and no drift.
+
+The [Karpathy skills repo](https://github.com/multica-ai/andrej-karpathy-skills) was a big help in shaping how I structure `CLAUDE.md`, worth reading through even if you don't adopt it wholesale. One rule I follow strictly: every markdown file stays under 200 lines. I have a hook that fires when any `.md` exceeds that and prompts a cleanup.
+
+```
+.claude/
+├── CLAUDE.md         # project context + one-shot stories
+└── todos/
+    ├── auth.md       # step-by-step plan for larger stories
+    ├── payments.md
+    └── ...
+```
+
+---
+
+## Two MCPs I actually use
+
+I've tried a lot of MCPs. Most didn't stick. Although MCPs depend on your tech stack, the two I keep coming back to are:
+
+**Supabase MCP**, read-only access to query my database, test integrations, and validate feature behavior.
+
+**Context7**, for library docs and discovery. When I'm working with an unfamiliar package or a new version of something, it pulls live documentation into context. Context7 has gotten pretty popular for good reason.
+
+---
+
+## Three repos worth your time
+
+These deserve more attention than they get:
+
+**[andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills)** — A short, well-thought-out repo that helped me structure my `CLAUDE.md` to get more out of it. IMO the best place to optimize, as it's the file that gets read in every single session.
+
+**[claude-code-harness](https://github.com/Chachamaru127/claude-code-harness)** — skills, hooks, and subagent configurations that extend Claude Code's default behavior. I go through this regularly and pull in things that fit my workflow.
+
+**[awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents)** — curated list of specialized subagents for specific tasks. The Claude Code ecosystem is moving fast enough that checking in on this a few times a week is worth it.
+
+{/* TODO: Owen — 2-3 sentences on your browsing habit. What's the best thing you've found from these recently? */}
+
+---
+
+## Choosing the right model
+
+Most of my day-to-day work runs on Sonnet 4.6 at medium effort. It's fast, good enough for the vast majority of tasks, and keeps costs reasonable.
+
+The pattern I've leaned into lately is using Opus to orchestrate and delegate to Haiku subagents for repetitive tasks and discovery. Haiku is surprisingly capable with the right context, and the cost difference is significant.
+
+The key to making Haiku subagents actually useful is giving them the right documentation, more so than with other models. I build this out incrementally per project in a `RULES.md` and other nested files. The subagent pulls this in and the output stays consistent with the rest of the codebase without me having to explain it every time.
+
+---
+
+## Obsidian Digest: the non-code brain
+
+I've been using an Obsidian-based system I developed to connect my growing project's codebase to a larger system for managing long-term vision, documents, and learnings I've picked up along the way.
+
+[Obsidian Digest](https://github.com/owenHochwald/obsidian-digest) is how I connect Claude Code to my Obsidian second brain. The `/research` skill is for research, landscape discovery, and product validation. Claude Code is surprisingly capable at deep research and document creation well beyond code-related work, and I'd encourage you to give it a try.
+
+This is the part of the system that's hardest to explain and easiest to skip. Try it before dismissing it.
+
+---
+
+## TDD with a human in the loop
+
+I lead with TDD, but I write and inspect the tests myself before handing the implementation to Claude.
+
+The tests become the single source of truth for whether a feature is done. Claude's job is to make them pass, and my job is to make sure the tests actually capture what I care about and that the agent isn't taking a shortcut. This keeps a human in the loop without sacrificing speed.
+
+For key business logic like payments, auth, and core services, I go through the implementation very carefully. Investing extra time here pays off significantly, since a lack of understanding in these areas can lead to hours wasted when things inevitably go wrong. It's hard to debug a black box you never looked inside. Controllers, middleware, and utility layers get less scrutiny. The risk profile is different.
+
+Before touching any feature I spend real time planning. The main things I consider: what does this need to handle, what are the edge cases, and does this leave me open to being exploited. AI has increasingly shifted me toward a more defensive programming approach, catching problems as early as possible.
+
+I'm also strict about dependencies. I don't let Claude choose what to pull in without review. Every new package is a new attack surface.
+
+---
+
+## Scaling up or down
+
+The core stays constant: a written sense of what you're building, deliberate context, and a couple of focused tools tailored to your style. Everything else is optional.
+
+Quick one-shot feature? Skip the todo. Weekend project? Skip Obsidian, go straight to the context file. Something you're spending months on? Layer everything in, research step, full epic breakdown, Obsidian integration, the works.
+
+Experiment with what works best for you.
+
+---
+
+This is just what I've found works for me, and I'm still actively trying to improve it. If something in your workflow makes this look naive, I'd genuinely love to hear it. Find me on [LinkedIn](https://www.linkedin.com/in/ohoch/).
+
+---
