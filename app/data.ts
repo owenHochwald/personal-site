@@ -182,6 +182,14 @@ export const BLOG_POSTS: BlogPost[] = [
         date: 'Apr 2026',
         readingTime: 5,
     },
+    {
+        title: 'My Agentic Coding System',
+        description: 'My personal system for buidling software with AI agents.',
+        link: '/blog/my-agentic-coding-system',
+        uid: 'blog-5',
+        date: 'Jun 2026',
+        readingTime: 7,
+    },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
