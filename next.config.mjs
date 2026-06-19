@@ -8,6 +8,7 @@ const nextConfig = {
   experimental: {
     viewTransition: true,
   },
+  turbopack: {},
 };
 
 const withMDX = createMDX({
